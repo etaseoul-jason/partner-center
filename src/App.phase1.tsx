@@ -34,28 +34,21 @@ type NavItem = { id: string; kr?: string; en?: string; icon?: JSX.Element; route
 
 const NAV: NavItem[] = [
   // ── 메인 ──
-  { id: "dashboard", kr: "대시보드", en: "Dashboard", route: "dashboard", tag: "P2", icon: (
+  { id: "dashboard", kr: "대시보드", en: "Dashboard", route: "dashboard", icon: (
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
-  ), children: [
-    { id: "dash-revenue", kr: "매출 현황", en: "Revenue", phase: 2 },
-    { id: "dash-orders", kr: "거래건수", en: "Transactions", phase: 2 },
-    { id: "dash-notices", kr: "공지사항", en: "Notices", phase: 2 },
-  ]},
+  )},
   { id: "orders", kr: "주문 관리", en: "Orders", route: "orders", icon: (
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/></svg>
   ), children: [
     { id: "order-list", kr: "주문 목록", en: "Order List" },
     { id: "order-needs", kr: "응대필요 탭", en: "Needs Response" },
     { id: "order-panel", kr: "상담 슬라이드 패널", en: "Chat Slide Panel" },
-    { id: "order-panel-adv", kr: "패널 고도화", en: "Panel Advanced", phase: 2 },
-    { id: "order-assign-adv", kr: "배정 로직 고도화", en: "Assign Advanced", phase: 2 },
-    { id: "order-export", kr: "주문 데이터 다운로드", en: "Export Orders", phase: 2 },
   ]},
-  { id: "chat", kr: "상담 (번개톡)", en: "Chat Support", route: "chat", tag: "제거예정", icon: (
+  { id: "chat", kr: "상담 (번개톡)", en: "Chat Support", route: "chat", icon: (
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
   )},
   { id: "divider" },
-  // ── 설정 (P1) ──
+  // ── 설정 ──
   { id: "accounts", kr: "계정관리", en: "Accounts", icon: (
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
   ), children: [
@@ -72,19 +65,8 @@ const NAV: NavItem[] = [
   ), children: [
     { id: "notice-list", kr: "공지 목록 / 상세", en: "Notice List / Detail" },
   ]},
-  // ── P2 전용 메뉴 ──
-  { id: "points", kr: "포인트", en: "Points", tag: "P2", icon: (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
-  ), children: [
-    { id: "point-charge", kr: "포인트 조회 / 충전", en: "Balance / Charge", phase: 2 },
-  ]},
-  { id: "settlement", kr: "정산", en: "Settlement", tag: "P2", icon: (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-  ), children: [
-    { id: "invoice", kr: "인보이스 발행", en: "Invoice", phase: 2 },
-  ]},
   { id: "divider2" },
-  // ── 마이페이지 (P1 · Header) ──
+  // ── 마이페이지 ──
   { id: "mypage", kr: "마이페이지", en: "My Page", icon: (
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
   ), children: [
@@ -92,7 +74,7 @@ const NAV: NavItem[] = [
     { id: "addresses", kr: "배송지 관리", en: "Shipping Addresses" },
   ]},
   { id: "divider3" },
-  // ── 어드민 (P1) ──
+  // ── 어드민 ──
   { id: "admin-partners", kr: "파트너 관리", en: "Partner Mgmt", icon: (
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
   ), children: [
